@@ -1,0 +1,100 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="account_report" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0ec753b-e87b-4831-be8b-50d3ef37c84e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (6)"/>
+	<query language="SQL"><![CDATA[select*from  trustbankdb.accounts ]]></query>
+	<field name="customer_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="accounts"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="accounts"/>
+	</field>
+	<field name="account_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="account_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="account_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="accounts"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{customer_id}]]></expression>
+		<groupHeader>
+			<band height="77">
+				<element kind="staticText" uuid="98b87bdf-de06-42d9-8eed-cc02d0eb5716" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" fontSize="12.0">
+					<text><![CDATA[customer_id]]></text>
+				</element>
+				<element kind="textField" uuid="3aebc5da-bfb8-4654-96b2-b248ce774db9" mode="Opaque" x="99" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" fontSize="24.0" bold="true">
+					<expression><![CDATA[$F{customer_id}]]></expression>
+				</element>
+				<element kind="line" uuid="c5d32d68-406e-41d5-a7d6-de26c73db39c" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<expression><![CDATA[$F{balance}]]></expression>
+		<groupHeader>
+			<band height="72">
+				<element kind="textField" uuid="cedd9563-b1fc-4b9b-b140-17748269dd5f" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="22.0" bold="true">
+					<expression><![CDATA[$F{balance}]]></expression>
+				</element>
+				<element kind="staticText" uuid="90df9346-e809-4b34-aa42-1283f4710f3f" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[balance]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<expression><![CDATA[$F{account_type}]]></expression>
+		<groupHeader>
+			<band height="74">
+				<element kind="textField" uuid="ad6319e6-807d-4079-8858-2e0ea5548e7d" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="20.0" bold="true">
+					<expression><![CDATA[$F{account_type}]]></expression>
+				</element>
+				<element kind="staticText" uuid="81b07481-5a7d-40d0-a15e-1ed7d2cd7ca3" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[account_type]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="7d329e94-a439-4d44-8b4d-2a2040fd40c3" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="10680cd1-4574-4f2a-9dcd-964b826de9f0" x="98" y="20" width="399" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true" hTextAlign="Center">
+				<text><![CDATA[Account Report]]></text>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<columnHeader height="21">
+		<element kind="line" uuid="c46c710a-4f1f-4d93-9f0e-41bb1656c2b5" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="line" uuid="c349517f-228a-40df-a4b6-7d503beddae1" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="372">
+		<element kind="textField" uuid="70ea1f93-c378-45d7-84e4-a455a2c9a41e" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="0399d989-37ce-4b2a-8cff-a9a8b6778fa2" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="19a47f62-8d3e-424c-a169-43b07372601c" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>

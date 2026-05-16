@@ -1,0 +1,129 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="customer_reportt" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4408e2da-f0b1-4c97-9475-bc2e6c1bd6b8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="customer_reportt"/>
+	<query language="SQL"><![CDATA[select * from trustbankdb.customers ]]></query>
+	<field name="customer_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{customer_id}]]></expression>
+		<groupHeader>
+			<band height="33">
+				<element kind="staticText" uuid="4596d508-2a07-4689-9594-58b8fb97b966" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" fontSize="12.0">
+					<text><![CDATA[customer_id]]></text>
+				</element>
+				<element kind="textField" uuid="2c5e42f6-6876-41da-9d46-7fbb67754601" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" fontSize="24.0" bold="true">
+					<expression><![CDATA[$F{customer_id}]]></expression>
+				</element>
+				<element kind="line" uuid="28de55f9-4917-46c4-8622-7a3ffafdc15c" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<expression><![CDATA[$F{name}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="ca0f77f0-c056-4f33-b7aa-d0e4f6f18496" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="22.0" bold="true">
+					<expression><![CDATA[$F{name}]]></expression>
+				</element>
+				<element kind="staticText" uuid="de9394b5-6773-4c70-b39a-30c44b56a7f6" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[name]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<expression><![CDATA[$F{nic}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="78487a40-cbf7-4ac3-8a12-4d847726b72e" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="20.0" bold="true">
+					<expression><![CDATA[$F{nic}]]></expression>
+				</element>
+				<element kind="staticText" uuid="108fecec-f8d4-416e-860a-447716aad8a4" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[nic]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<expression><![CDATA[$F{address}]]></expression>
+		<groupHeader>
+			<band height="32">
+				<element kind="textField" uuid="fabab14b-eb96-4451-a496-b2e56c5a027b" x="100" y="0" width="455" height="32" forecolor="#006699" fontSize="16.0" bold="true">
+					<expression><![CDATA[$F{address}]]></expression>
+				</element>
+				<element kind="staticText" uuid="2594d516-7ec3-4cd1-b27a-02d8c311cd90" x="0" y="0" width="100" height="20" forecolor="#666666" fontSize="12.0">
+					<text><![CDATA[address]]></text>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="phone">
+		<expression><![CDATA[$F{phone}]]></expression>
+	</group>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="640b8674-0f53-4489-bd07-1e5c9b0040c1" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="da3104ab-53df-4bcd-bcad-9a1beff7667c" x="60" y="20" width="450" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true" hTextAlign="Center">
+				<text><![CDATA[Customer Report]]></text>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<columnHeader height="21">
+		<element kind="line" uuid="9195836d-6721-424d-a2fa-c1a7b9c9693c" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+	</columnHeader>
+	<detail>
+		<band height="44">
+			<element kind="line" uuid="d6773ae9-7651-4aaa-8a3b-ebaf6a5096e0" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="9f38f747-93c6-4ccb-a6fd-f0b9c830a935" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="d1f59bd8-d6d1-4858-873d-3c8b7cbb0082" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="9fc3ad9f-f46d-47f6-85a8-8ed2e897c45b" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>
